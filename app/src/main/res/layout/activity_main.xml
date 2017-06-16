@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kingt.emrpad.MainActivity">
+
+    <im.delight.android.webview.AdvancedWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/fp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:background="#ffffff">
+        <ImageView
+            android:id="@+id/fpimg"
+            android:layout_width="165dp"
+            android:layout_height="220dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <ImageButton
+                android:id="@+id/fpcancel"
+                android:layout_width="100dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_no"
+                android:onClick="fpCancel"/>
+
+            <ImageButton
+                android:id="@+id/fpok"
+                android:layout_width="100dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_ok"
+                android:onClick="fpOk"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadingAvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:indicatorName="BallBeatIndicator"
+        app:indicatorColor="#00bcd4"
+        />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/audioAvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:indicatorName="LineScalePartyIndicator"
+        app:indicatorColor="#00bcd4"
+        />
+
+</android.widget.RelativeLayout>
